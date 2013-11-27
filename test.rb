@@ -25,18 +25,21 @@ class Variety < ProtocolBuffers::Message
 
 end
 
-x1 = Variety.new :x => 1, :y => 2
-s = ""
+def x1
+  x1 = Variety.new :x => 1, :y => 2
+  s = ""
 
-startTime = Time.now
+  startTime = Time.now
 
-(0...1000).each do |i|
-  x1.serialize(s)
+  (0...1000).each do |i|
+    x1.serialize(s)
+  end
+
+  endTimeRPB = Time.now - startTime
+  puts "--------------------------------------------------------------"
+  puts "ruby-protocol-buffers, 1000 serialize iterations: #{endTimeRPB} sec"
+  endTimeRPB
 end
-
-endTimeRPB = Time.now - startTime
-puts "--------------------------------------------------------------"
-puts "ruby-protocol-buffers, 1000 serialize iterations: #{endTimeRPB} sec"
 
 #####################################################################
 ##
@@ -58,18 +61,20 @@ class VarietyBeef
 
 end
 
-x2 = VarietyBeef.new :x => 1, :y => 2
-s = ""
+def x2
+  x2 = VarietyBeef.new :x => 1, :y => 2
+  s = ""
 
-startTime = Time.now
+  startTime = Time.now
 
-(0...1000).each do |i|
-  x2.encode(s)
+  (0...1000).each do |i|
+    x2.encode(s)
+  end
+
+  endTimeBeef = Time.now - startTime
+  puts "beefcake, 1000 serialize iterations: : #{endTimeBeef} sec"
+  endTimeBeef
 end
-
-endTimeBeef = Time.now - startTime
-puts "beefcake, 1000 serialize iterations: : #{endTimeBeef} sec"
-
 
 #####################################################################
 ##
@@ -90,18 +95,20 @@ class VarietyProto < Protobuf::Message
 
 end
 
-x3 = VarietyProto.new :x => 1, :y => 2
-s = ""
+def x3
+  x3 = VarietyProto.new :x => 1, :y => 2
+  s = ""
 
-startTime = Time.now
+  startTime = Time.now
 
-(0...1000).each do |i|
-  x3.serialize_to_string
+  (0...1000).each do |i|
+    x3.serialize_to_string
+  end
+
+  endTimeProto = Time.now - startTime
+  puts "protobuf, 1000 serialize iterations: : #{endTimeProto} sec"
+  endTimeProto
 end
-
-endTimeProto = Time.now - startTime
-puts "protobuf, 1000 serialize iterations: : #{endTimeProto} sec"
-
 
 #####################################################################
 ##
@@ -114,17 +121,30 @@ require_relative './protobuf-java-2.5.0.jar'
 $CLASSPATH << File.join(Dir.pwd,"target")
 require 'hash_to_proto_converter'
 
-startTime = Time.now
+def x4
+  startTime = Time.now
 
-(0...1000).each do |i|
-  proto = Minecart::HashProtoBuilder.hash_to_proto(
-    com.liquidm.Test::Variety,x: 1,y: 2
-  )
+  (0...1000).each do |i|
+    proto = Minecart::HashProtoBuilder.hash_to_proto(
+      com.liquidm.Test::Variety,x: 1,y: 2
+    )
+  end
+
+  endTimeJavaProto = Time.now - startTime
+  puts "java protobuf, 1000 serialize iterations: : #{endTimeJavaProto} sec"
+  endTimeJavaProto
 end
 
-endTimeJavaProto = Time.now - startTime
-puts "java protobuf, 1000 serialize iterations: : #{endTimeJavaProto} sec"
+#####################################################################
+##
+## => raw java protobuf jar
+##
+#####################################################################
 
+# variety_builder = com.liquidm.test::variety.newBuilder
+# variety_builder.setX(1)
+# variety_builder.setY(2)
+# variety = variety_builder.build
 
 #####################################################################
 ##
@@ -132,13 +152,31 @@ puts "java protobuf, 1000 serialize iterations: : #{endTimeJavaProto} sec"
 ##
 #####################################################################
 
-puts "--------------------------------------------------------------\n"
+def results x1, x2, x3, x4
+  puts "--------------------------------------------------------------\n"
 
-puts "protobuf - ruby-protocol-buffers: #{((1 - (endTimeProto / endTimeRPB)) * 100).round(3)}% faster"
-puts "protobuf - beefcake #{((1 - (endTimeProto / endTimeBeef)) * 100).round(3)}% faster"
-puts "ruby protobuf - java protobuf #{((1 - (endTimeProto / endTimeBeef)) * 100).round(3)}% faster"
+  puts "protobuf - ruby-protocol-buffers: #{((1 - (x3 / x1)) * 100).round(3)}% faster"
+  puts "protobuf - beefcake #{((1 - (x3 / x2)) * 100).round(3)}% faster"
+  puts "ruby protobuf - java protobuf #{((1 - (x3 / x4)) * 100).round(3)}% faster"
 
-puts "--------------------------------------------------------------\n"
+  puts "--------------------------------------------------------------\n"
+end
 
+x1 = x2 = x3 = x4 = 0
 
+ITERATIONS = 100
+(0...ITERATIONS).each do |i|  
+  x1 += x1(); x2 += x2(); x3 += x3(); x4 += x4();
+end 
 
+x1 /= ITERATIONS; x2 /= ITERATIONS; x3 /= ITERATIONS; x4 /= ITERATIONS;
+
+puts "===============================================================\n"
+puts "Performance compared to fastest solution"
+puts "===============================================================\n"
+
+puts "protobuf - ruby-protocol-buffers: #{((1 - (x3 / x1)) * 100).round(3)}% faster"
+puts "protobuf - beefcake #{((1 - (x3 / x2)) * 100).round(3)}% faster"
+puts "ruby protobuf - java protobuf #{((1 - (x3 / x4)) * 100).round(3)}% faster"
+
+puts "===============================================================\n"
