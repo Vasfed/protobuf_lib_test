@@ -1,0 +1,41 @@
+package example.pizza;
+
+option java_package = "com.pizza";
+option java_generic_services = true;
+
+message Person {
+  optional string name = 1;
+  optional string email = 2;
+  optional string phone = 3;
+}
+
+message Address {
+  optional string street1 = 1;
+  optional string street2 = 2;
+  optional string street3 = 3;
+  optional string city = 4;
+  optional string postal_code = 5;
+  optional string state = 6;
+  optional string country = 7;
+}
+
+message LineItem {
+  optional string item = 1;
+  optional int32  quantity = 2;
+}
+
+message OrderRequest {
+  optional Person person = 1;
+  optional Address address = 2;
+  repeated LineItem line_items = 3;
+}
+
+message OrderResponse {
+  required string order_id = 1;
+  required bool success = 2;
+  optional string error_message = 3;
+}
+
+service OrderingService {
+  rpc PlaceOrder ( OrderRequest ) returns ( OrderResponse );
+}
