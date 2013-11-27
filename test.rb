@@ -164,7 +164,7 @@ end
 
 x1 = x2 = x3 = x4 = 0
 
-ITERATIONS = 100
+ITERATIONS = 1000
 (0...ITERATIONS).each do |i|  
   x1 += x1(); x2 += x2(); x3 += x3(); x4 += x4();
 end 
