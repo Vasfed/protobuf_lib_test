@@ -4,7 +4,7 @@ require 'rubygems'
 
 require 'protocol_buffers'
 require 'beefcake'
-# require 'protobuf'
+require 'protobuf'
 
 #####################################################################
 ##
@@ -77,30 +77,30 @@ puts "beefcake, 1000 serialize iterations: : #{endTimeBeef} sec"
 ##
 #####################################################################
 
-# class VarietyProto < Protobuf::Message
+class VarietyProto < Protobuf::Message
 
-#   required ::Protobuf::Field::Int32Field, :x, 1
-#   required ::Protobuf::Field::Int32Field, :y, 2
-#   optional ::Protobuf::Field::StringField, :tag, 3
+  required ::Protobuf::Field::Int32Field, :x, 1
+  required ::Protobuf::Field::Int32Field, :y, 2
+  optional ::Protobuf::Field::StringField, :tag, 3
 
-#   module Foonum
-#     A = 1
-#     B = 2
-#   end
+  module Foonum
+    A = 1
+    B = 2
+  end
 
-# end
+end
 
-# x3 = VarietyProto.new :x => 1, :y => 2
-# s = ""
+x3 = VarietyProto.new :x => 1, :y => 2
+s = ""
 
-# startTime = Time.now
+startTime = Time.now
 
-# (0...1000).each do |i|
-#   x3.serialize_to_string
-# end
+(0...1000).each do |i|
+  x3.serialize_to_string
+end
 
-# endTimeProto = Time.now - startTime
-# puts "protobuf, 1000 serialize iterations: : #{endTimeProto} sec"
+endTimeProto = Time.now - startTime
+puts "protobuf, 1000 serialize iterations: : #{endTimeProto} sec"
 
 
 #####################################################################
@@ -118,12 +118,12 @@ startTime = Time.now
 
 (0...1000).each do |i|
   proto = Minecart::HashProtoBuilder.hash_to_proto(
-    com.liquidm.test::variety,x: 1,y: 2
+    com.liquidm.Test::Variety,x: 1,y: 2
   )
 end
 
-endTimeProto = Time.now - startTime
-puts "java protobuf, 1000 serialize iterations: : #{endTimeProto} sec"
+endTimeJavaProto = Time.now - startTime
+puts "java protobuf, 1000 serialize iterations: : #{endTimeJavaProto} sec"
 
 
 #####################################################################
@@ -136,6 +136,7 @@ puts "--------------------------------------------------------------\n"
 
 puts "protobuf - ruby-protocol-buffers: #{((1 - (endTimeProto / endTimeRPB)) * 100).round(3)}% faster"
 puts "protobuf - beefcake #{((1 - (endTimeProto / endTimeBeef)) * 100).round(3)}% faster"
+puts "ruby protobuf - java protobuf #{((1 - (endTimeProto / endTimeBeef)) * 100).round(3)}% faster"
 
 puts "--------------------------------------------------------------\n"
 

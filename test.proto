@@ -1,4 +1,4 @@
-package com.liquidm;
+package example.liquidm;
 
 option java_package = "com.liquidm";
 option java_generic_services = true;

@@ -10,287 +10,144 @@ public final class Pizza {
   }
   public interface PersonOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-
+    
     // optional string name = 1;
-    /**
-     * <code>optional string name = 1;</code>
-     */
     boolean hasName();
-    /**
-     * <code>optional string name = 1;</code>
-     */
-    java.lang.String getName();
-    /**
-     * <code>optional string name = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
+    String getName();
+    
     // optional string email = 2;
-    /**
-     * <code>optional string email = 2;</code>
-     */
     boolean hasEmail();
-    /**
-     * <code>optional string email = 2;</code>
-     */
-    java.lang.String getEmail();
-    /**
-     * <code>optional string email = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getEmailBytes();
-
+    String getEmail();
+    
     // optional string phone = 3;
-    /**
-     * <code>optional string phone = 3;</code>
-     */
     boolean hasPhone();
-    /**
-     * <code>optional string phone = 3;</code>
-     */
-    java.lang.String getPhone();
-    /**
-     * <code>optional string phone = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getPhoneBytes();
+    String getPhone();
   }
-  /**
-   * Protobuf type {@code example.pizza.Person}
-   */
   public static final class Person extends
       com.google.protobuf.GeneratedMessage
       implements PersonOrBuilder {
     // Use Person.newBuilder() to construct.
-    private Person(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private Person(Builder builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private Person(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
+    private Person(boolean noInit) {}
+    
     private static final Person defaultInstance;
     public static Person getDefaultInstance() {
       return defaultInstance;
     }
-
+    
     public Person getDefaultInstanceForType() {
       return defaultInstance;
     }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Person(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              name_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              email_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              phone_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
+    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.pizza.Pizza.internal_static_example_pizza_Person_descriptor;
     }
-
+    
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.pizza.Pizza.internal_static_example_pizza_Person_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.pizza.Pizza.Person.class, com.pizza.Pizza.Person.Builder.class);
+      return com.pizza.Pizza.internal_static_example_pizza_Person_fieldAccessorTable;
     }
-
-    public static com.google.protobuf.Parser<Person> PARSER =
-        new com.google.protobuf.AbstractParser<Person>() {
-      public Person parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Person(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Person> getParserForType() {
-      return PARSER;
-    }
-
+    
     private int bitField0_;
     // optional string name = 1;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.Object name_;
-    /**
-     * <code>optional string name = 1;</code>
-     */
     public boolean hasName() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    /**
-     * <code>optional string name = 1;</code>
-     */
-    public java.lang.String getName() {
+    public String getName() {
       java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
           name_ = s;
         }
         return s;
       }
     }
-    /**
-     * <code>optional string name = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
+    private com.google.protobuf.ByteString getNameBytes() {
       java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
         name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
+    
     // optional string email = 2;
     public static final int EMAIL_FIELD_NUMBER = 2;
     private java.lang.Object email_;
-    /**
-     * <code>optional string email = 2;</code>
-     */
     public boolean hasEmail() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    /**
-     * <code>optional string email = 2;</code>
-     */
-    public java.lang.String getEmail() {
+    public String getEmail() {
       java.lang.Object ref = email_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
           email_ = s;
         }
         return s;
       }
     }
-    /**
-     * <code>optional string email = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getEmailBytes() {
+    private com.google.protobuf.ByteString getEmailBytes() {
       java.lang.Object ref = email_;
-      if (ref instanceof java.lang.String) {
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
         email_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
+    
     // optional string phone = 3;
     public static final int PHONE_FIELD_NUMBER = 3;
     private java.lang.Object phone_;
-    /**
-     * <code>optional string phone = 3;</code>
-     */
     public boolean hasPhone() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    /**
-     * <code>optional string phone = 3;</code>
-     */
-    public java.lang.String getPhone() {
+    public String getPhone() {
       java.lang.Object ref = phone_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
           phone_ = s;
         }
         return s;
       }
     }
-    /**
-     * <code>optional string phone = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPhoneBytes() {
+    private com.google.protobuf.ByteString getPhoneBytes() {
       java.lang.Object ref = phone_;
-      if (ref instanceof java.lang.String) {
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
         phone_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
+    
     private void initFields() {
       name_ = "";
       email_ = "";
@@ -300,11 +157,11 @@ public final class Pizza {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-
+      
       memoizedIsInitialized = 1;
       return true;
     }
-
+    
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -319,12 +176,12 @@ public final class Pizza {
       }
       getUnknownFields().writeTo(output);
     }
-
+    
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-
+    
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -342,83 +199,94 @@ public final class Pizza {
       memoizedSerializedSize = size;
       return size;
     }
-
+    
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-
+    
     public static com.pizza.Pizza.Person parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return newBuilder().mergeFrom(data).buildParsed();
     }
     public static com.pizza.Pizza.Person parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.Person parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return newBuilder().mergeFrom(data).buildParsed();
     }
     public static com.pizza.Pizza.Person parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.Person parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return newBuilder().mergeFrom(input).buildParsed();
     }
     public static com.pizza.Pizza.Person parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.Person parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
     }
     public static com.pizza.Pizza.Person parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
     }
     public static com.pizza.Pizza.Person parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return newBuilder().mergeFrom(input).buildParsed();
     }
     public static com.pizza.Pizza.Person parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
     }
-
+    
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(com.pizza.Pizza.Person prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-
+    
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-    /**
-     * Protobuf type {@code example.pizza.Person}
-     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements com.pizza.Pizza.PersonOrBuilder {
@@ -426,21 +294,18 @@ public final class Pizza {
           getDescriptor() {
         return com.pizza.Pizza.internal_static_example_pizza_Person_descriptor;
       }
-
+      
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.pizza.Pizza.internal_static_example_pizza_Person_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.pizza.Pizza.Person.class, com.pizza.Pizza.Person.Builder.class);
+        return com.pizza.Pizza.internal_static_example_pizza_Person_fieldAccessorTable;
       }
-
+      
       // Construct using com.pizza.Pizza.Person.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      
+      private Builder(BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -451,7 +316,7 @@ public final class Pizza {
       private static Builder create() {
         return new Builder();
       }
-
+      
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -462,20 +327,20 @@ public final class Pizza {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-
+      
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-
+      
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.pizza.Pizza.internal_static_example_pizza_Person_descriptor;
+        return com.pizza.Pizza.Person.getDescriptor();
       }
-
+      
       public com.pizza.Pizza.Person getDefaultInstanceForType() {
         return com.pizza.Pizza.Person.getDefaultInstance();
       }
-
+      
       public com.pizza.Pizza.Person build() {
         com.pizza.Pizza.Person result = buildPartial();
         if (!result.isInitialized()) {
@@ -483,7 +348,17 @@ public final class Pizza {
         }
         return result;
       }
-
+      
+      private com.pizza.Pizza.Person buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.pizza.Pizza.Person result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
       public com.pizza.Pizza.Person buildPartial() {
         com.pizza.Pizza.Person result = new com.pizza.Pizza.Person(this);
         int from_bitField0_ = bitField0_;
@@ -504,7 +379,7 @@ public final class Pizza {
         onBuilt();
         return result;
       }
-
+      
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.pizza.Pizza.Person) {
           return mergeFrom((com.pizza.Pizza.Person)other);
@@ -513,94 +388,86 @@ public final class Pizza {
           return this;
         }
       }
-
+      
       public Builder mergeFrom(com.pizza.Pizza.Person other) {
         if (other == com.pizza.Pizza.Person.getDefaultInstance()) return this;
         if (other.hasName()) {
-          bitField0_ |= 0x00000001;
-          name_ = other.name_;
-          onChanged();
+          setName(other.getName());
         }
         if (other.hasEmail()) {
-          bitField0_ |= 0x00000002;
-          email_ = other.email_;
-          onChanged();
+          setEmail(other.getEmail());
         }
         if (other.hasPhone()) {
-          bitField0_ |= 0x00000004;
-          phone_ = other.phone_;
-          onChanged();
+          setPhone(other.getPhone());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-
+      
       public final boolean isInitialized() {
         return true;
       }
-
+      
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.pizza.Pizza.Person parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.pizza.Pizza.Person) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              name_ = input.readBytes();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              email_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              phone_ = input.readBytes();
+              break;
+            }
           }
         }
-        return this;
       }
+      
       private int bitField0_;
-
+      
       // optional string name = 1;
       private java.lang.Object name_ = "";
-      /**
-       * <code>optional string name = 1;</code>
-       */
       public boolean hasName() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      /**
-       * <code>optional string name = 1;</code>
-       */
-      public java.lang.String getName() {
+      public String getName() {
         java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string name = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 1;</code>
-       */
-      public Builder setName(
-          java.lang.String value) {
+      public Builder setName(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -609,72 +476,34 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string name = 1;</code>
-       */
       public Builder clearName() {
         bitField0_ = (bitField0_ & ~0x00000001);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string name = 1;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      void setName(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000001;
         name_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional string email = 2;
       private java.lang.Object email_ = "";
-      /**
-       * <code>optional string email = 2;</code>
-       */
       public boolean hasEmail() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      /**
-       * <code>optional string email = 2;</code>
-       */
-      public java.lang.String getEmail() {
+      public String getEmail() {
         java.lang.Object ref = email_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           email_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string email = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getEmailBytes() {
-        java.lang.Object ref = email_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          email_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string email = 2;</code>
-       */
-      public Builder setEmail(
-          java.lang.String value) {
+      public Builder setEmail(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -683,72 +512,34 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string email = 2;</code>
-       */
       public Builder clearEmail() {
         bitField0_ = (bitField0_ & ~0x00000002);
         email_ = getDefaultInstance().getEmail();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string email = 2;</code>
-       */
-      public Builder setEmailBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      void setEmail(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000002;
         email_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional string phone = 3;
       private java.lang.Object phone_ = "";
-      /**
-       * <code>optional string phone = 3;</code>
-       */
       public boolean hasPhone() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      /**
-       * <code>optional string phone = 3;</code>
-       */
-      public java.lang.String getPhone() {
+      public String getPhone() {
         java.lang.Object ref = phone_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           phone_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string phone = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPhoneBytes() {
-        java.lang.Object ref = phone_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          phone_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string phone = 3;</code>
-       */
-      public Builder setPhone(
-          java.lang.String value) {
+      public Builder setPhone(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -757,196 +548,661 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string phone = 3;</code>
-       */
       public Builder clearPhone() {
         bitField0_ = (bitField0_ & ~0x00000004);
         phone_ = getDefaultInstance().getPhone();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string phone = 3;</code>
-       */
-      public Builder setPhoneBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      void setPhone(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000004;
         phone_ = value;
         onChanged();
-        return this;
       }
-
+      
       // @@protoc_insertion_point(builder_scope:example.pizza.Person)
     }
-
+    
     static {
       defaultInstance = new Person(true);
       defaultInstance.initFields();
     }
-
+    
     // @@protoc_insertion_point(class_scope:example.pizza.Person)
   }
-
+  
   public interface AddressOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-
+    
     // optional string street1 = 1;
-    /**
-     * <code>optional string street1 = 1;</code>
-     */
     boolean hasStreet1();
-    /**
-     * <code>optional string street1 = 1;</code>
-     */
-    java.lang.String getStreet1();
-    /**
-     * <code>optional string street1 = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getStreet1Bytes();
-
+    String getStreet1();
+    
     // optional string street2 = 2;
-    /**
-     * <code>optional string street2 = 2;</code>
-     */
     boolean hasStreet2();
-    /**
-     * <code>optional string street2 = 2;</code>
-     */
-    java.lang.String getStreet2();
-    /**
-     * <code>optional string street2 = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getStreet2Bytes();
-
+    String getStreet2();
+    
     // optional string street3 = 3;
-    /**
-     * <code>optional string street3 = 3;</code>
-     */
     boolean hasStreet3();
-    /**
-     * <code>optional string street3 = 3;</code>
-     */
-    java.lang.String getStreet3();
-    /**
-     * <code>optional string street3 = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getStreet3Bytes();
-
+    String getStreet3();
+    
     // optional string city = 4;
-    /**
-     * <code>optional string city = 4;</code>
-     */
     boolean hasCity();
-    /**
-     * <code>optional string city = 4;</code>
-     */
-    java.lang.String getCity();
-    /**
-     * <code>optional string city = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getCityBytes();
-
+    String getCity();
+    
     // optional string postal_code = 5;
-    /**
-     * <code>optional string postal_code = 5;</code>
-     */
     boolean hasPostalCode();
-    /**
-     * <code>optional string postal_code = 5;</code>
-     */
-    java.lang.String getPostalCode();
-    /**
-     * <code>optional string postal_code = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getPostalCodeBytes();
-
+    String getPostalCode();
+    
     // optional string state = 6;
-    /**
-     * <code>optional string state = 6;</code>
-     */
     boolean hasState();
-    /**
-     * <code>optional string state = 6;</code>
-     */
-    java.lang.String getState();
-    /**
-     * <code>optional string state = 6;</code>
-     */
-    com.google.protobuf.ByteString
-        getStateBytes();
-
+    String getState();
+    
     // optional string country = 7;
-    /**
-     * <code>optional string country = 7;</code>
-     */
     boolean hasCountry();
-    /**
-     * <code>optional string country = 7;</code>
-     */
-    java.lang.String getCountry();
-    /**
-     * <code>optional string country = 7;</code>
-     */
-    com.google.protobuf.ByteString
-        getCountryBytes();
+    String getCountry();
   }
-  /**
-   * Protobuf type {@code example.pizza.Address}
-   */
   public static final class Address extends
       com.google.protobuf.GeneratedMessage
       implements AddressOrBuilder {
     // Use Address.newBuilder() to construct.
-    private Address(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private Address(Builder builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private Address(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
+    private Address(boolean noInit) {}
+    
     private static final Address defaultInstance;
     public static Address getDefaultInstance() {
       return defaultInstance;
     }
-
+    
     public Address getDefaultInstanceForType() {
       return defaultInstance;
     }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pizza.Pizza.internal_static_example_pizza_Address_descriptor;
     }
-    private Address(
-        com.google.protobuf.CodedInputStream input,
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pizza.Pizza.internal_static_example_pizza_Address_fieldAccessorTable;
+    }
+    
+    private int bitField0_;
+    // optional string street1 = 1;
+    public static final int STREET1_FIELD_NUMBER = 1;
+    private java.lang.Object street1_;
+    public boolean hasStreet1() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    public String getStreet1() {
+      java.lang.Object ref = street1_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          street1_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getStreet1Bytes() {
+      java.lang.Object ref = street1_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        street1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // optional string street2 = 2;
+    public static final int STREET2_FIELD_NUMBER = 2;
+    private java.lang.Object street2_;
+    public boolean hasStreet2() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    public String getStreet2() {
+      java.lang.Object ref = street2_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          street2_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getStreet2Bytes() {
+      java.lang.Object ref = street2_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        street2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // optional string street3 = 3;
+    public static final int STREET3_FIELD_NUMBER = 3;
+    private java.lang.Object street3_;
+    public boolean hasStreet3() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    public String getStreet3() {
+      java.lang.Object ref = street3_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          street3_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getStreet3Bytes() {
+      java.lang.Object ref = street3_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        street3_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // optional string city = 4;
+    public static final int CITY_FIELD_NUMBER = 4;
+    private java.lang.Object city_;
+    public boolean hasCity() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    public String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          city_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // optional string postal_code = 5;
+    public static final int POSTAL_CODE_FIELD_NUMBER = 5;
+    private java.lang.Object postalCode_;
+    public boolean hasPostalCode() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    public String getPostalCode() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          postalCode_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getPostalCodeBytes() {
+      java.lang.Object ref = postalCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        postalCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // optional string state = 6;
+    public static final int STATE_FIELD_NUMBER = 6;
+    private java.lang.Object state_;
+    public boolean hasState() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    public String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          state_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // optional string country = 7;
+    public static final int COUNTRY_FIELD_NUMBER = 7;
+    private java.lang.Object country_;
+    public boolean hasCountry() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    public String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          country_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    private void initFields() {
+      street1_ = "";
+      street2_ = "";
+      street3_ = "";
+      city_ = "";
+      postalCode_ = "";
+      state_ = "";
+      country_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+      
+      memoizedIsInitialized = 1;
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getStreet1Bytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getStreet2Bytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getStreet3Bytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getCityBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getPostalCodeBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getStateBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getCountryBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getStreet1Bytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getStreet2Bytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getStreet3Bytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getCityBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getPostalCodeBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getStateBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getCountryBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+    
+    public static com.pizza.Pizza.Address parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.pizza.Pizza.Address parseFrom(
+        com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.pizza.Pizza.Address parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.pizza.Pizza.Address parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.pizza.Pizza.Address parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.pizza.Pizza.Address parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.pizza.Pizza.Address parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.pizza.Pizza.Address parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.pizza.Pizza.Address parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.pizza.Pizza.Address parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.pizza.Pizza.Address prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.pizza.Pizza.AddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pizza.Pizza.internal_static_example_pizza_Address_descriptor;
+      }
+      
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pizza.Pizza.internal_static_example_pizza_Address_fieldAccessorTable;
+      }
+      
+      // Construct using com.pizza.Pizza.Address.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+      
+      private Builder(BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+      
+      public Builder clear() {
+        super.clear();
+        street1_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        street2_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        street3_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        city_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        postalCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        state_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        country_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pizza.Pizza.Address.getDescriptor();
+      }
+      
+      public com.pizza.Pizza.Address getDefaultInstanceForType() {
+        return com.pizza.Pizza.Address.getDefaultInstance();
+      }
+      
+      public com.pizza.Pizza.Address build() {
+        com.pizza.Pizza.Address result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+      
+      private com.pizza.Pizza.Address buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.pizza.Pizza.Address result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
+      public com.pizza.Pizza.Address buildPartial() {
+        com.pizza.Pizza.Address result = new com.pizza.Pizza.Address(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.street1_ = street1_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.street2_ = street2_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.street3_ = street3_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.city_ = city_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.postalCode_ = postalCode_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.state_ = state_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.country_ = country_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pizza.Pizza.Address) {
+          return mergeFrom((com.pizza.Pizza.Address)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.pizza.Pizza.Address other) {
+        if (other == com.pizza.Pizza.Address.getDefaultInstance()) return this;
+        if (other.hasStreet1()) {
+          setStreet1(other.getStreet1());
+        }
+        if (other.hasStreet2()) {
+          setStreet2(other.getStreet2());
+        }
+        if (other.hasStreet3()) {
+          setStreet3(other.getStreet3());
+        }
+        if (other.hasCity()) {
+          setCity(other.getCity());
+        }
+        if (other.hasPostalCode()) {
+          setPostalCode(other.getPostalCode());
+        }
+        if (other.hasState()) {
+          setState(other.getState());
+        }
+        if (other.hasCountry()) {
+          setCountry(other.getCountry());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public final boolean isInitialized() {
+        return true;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              done = true;
-              break;
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                done = true;
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
               }
               break;
             }
@@ -987,731 +1243,26 @@ public final class Pizza {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
       }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.pizza.Pizza.internal_static_example_pizza_Address_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.pizza.Pizza.internal_static_example_pizza_Address_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.pizza.Pizza.Address.class, com.pizza.Pizza.Address.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<Address> PARSER =
-        new com.google.protobuf.AbstractParser<Address>() {
-      public Address parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Address(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Address> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // optional string street1 = 1;
-    public static final int STREET1_FIELD_NUMBER = 1;
-    private java.lang.Object street1_;
-    /**
-     * <code>optional string street1 = 1;</code>
-     */
-    public boolean hasStreet1() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional string street1 = 1;</code>
-     */
-    public java.lang.String getStreet1() {
-      java.lang.Object ref = street1_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          street1_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string street1 = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStreet1Bytes() {
-      java.lang.Object ref = street1_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        street1_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string street2 = 2;
-    public static final int STREET2_FIELD_NUMBER = 2;
-    private java.lang.Object street2_;
-    /**
-     * <code>optional string street2 = 2;</code>
-     */
-    public boolean hasStreet2() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional string street2 = 2;</code>
-     */
-    public java.lang.String getStreet2() {
-      java.lang.Object ref = street2_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          street2_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string street2 = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStreet2Bytes() {
-      java.lang.Object ref = street2_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        street2_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string street3 = 3;
-    public static final int STREET3_FIELD_NUMBER = 3;
-    private java.lang.Object street3_;
-    /**
-     * <code>optional string street3 = 3;</code>
-     */
-    public boolean hasStreet3() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string street3 = 3;</code>
-     */
-    public java.lang.String getStreet3() {
-      java.lang.Object ref = street3_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          street3_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string street3 = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStreet3Bytes() {
-      java.lang.Object ref = street3_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        street3_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string city = 4;
-    public static final int CITY_FIELD_NUMBER = 4;
-    private java.lang.Object city_;
-    /**
-     * <code>optional string city = 4;</code>
-     */
-    public boolean hasCity() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional string city = 4;</code>
-     */
-    public java.lang.String getCity() {
-      java.lang.Object ref = city_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          city_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string city = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getCityBytes() {
-      java.lang.Object ref = city_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        city_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string postal_code = 5;
-    public static final int POSTAL_CODE_FIELD_NUMBER = 5;
-    private java.lang.Object postalCode_;
-    /**
-     * <code>optional string postal_code = 5;</code>
-     */
-    public boolean hasPostalCode() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional string postal_code = 5;</code>
-     */
-    public java.lang.String getPostalCode() {
-      java.lang.Object ref = postalCode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          postalCode_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string postal_code = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPostalCodeBytes() {
-      java.lang.Object ref = postalCode_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        postalCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string state = 6;
-    public static final int STATE_FIELD_NUMBER = 6;
-    private java.lang.Object state_;
-    /**
-     * <code>optional string state = 6;</code>
-     */
-    public boolean hasState() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional string state = 6;</code>
-     */
-    public java.lang.String getState() {
-      java.lang.Object ref = state_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          state_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string state = 6;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStateBytes() {
-      java.lang.Object ref = state_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        state_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string country = 7;
-    public static final int COUNTRY_FIELD_NUMBER = 7;
-    private java.lang.Object country_;
-    /**
-     * <code>optional string country = 7;</code>
-     */
-    public boolean hasCountry() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>optional string country = 7;</code>
-     */
-    public java.lang.String getCountry() {
-      java.lang.Object ref = country_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          country_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string country = 7;</code>
-     */
-    public com.google.protobuf.ByteString
-        getCountryBytes() {
-      java.lang.Object ref = country_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        country_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private void initFields() {
-      street1_ = "";
-      street2_ = "";
-      street3_ = "";
-      city_ = "";
-      postalCode_ = "";
-      state_ = "";
-      country_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getStreet1Bytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getStreet2Bytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getStreet3Bytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(4, getCityBytes());
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBytes(5, getPostalCodeBytes());
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeBytes(6, getStateBytes());
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeBytes(7, getCountryBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getStreet1Bytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getStreet2Bytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getStreet3Bytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getCityBytes());
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getPostalCodeBytes());
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getStateBytes());
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getCountryBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.pizza.Pizza.Address parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.pizza.Pizza.Address parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.pizza.Pizza.Address parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.pizza.Pizza.Address parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.pizza.Pizza.Address parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.pizza.Pizza.Address parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.pizza.Pizza.Address parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.pizza.Pizza.Address parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.pizza.Pizza.Address parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.pizza.Pizza.Address parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.pizza.Pizza.Address prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code example.pizza.Address}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.pizza.Pizza.AddressOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.pizza.Pizza.internal_static_example_pizza_Address_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.pizza.Pizza.internal_static_example_pizza_Address_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.pizza.Pizza.Address.class, com.pizza.Pizza.Address.Builder.class);
-      }
-
-      // Construct using com.pizza.Pizza.Address.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        street1_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        street2_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        street3_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        city_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
-        postalCode_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
-        state_ = "";
-        bitField0_ = (bitField0_ & ~0x00000020);
-        country_ = "";
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.pizza.Pizza.internal_static_example_pizza_Address_descriptor;
-      }
-
-      public com.pizza.Pizza.Address getDefaultInstanceForType() {
-        return com.pizza.Pizza.Address.getDefaultInstance();
-      }
-
-      public com.pizza.Pizza.Address build() {
-        com.pizza.Pizza.Address result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.pizza.Pizza.Address buildPartial() {
-        com.pizza.Pizza.Address result = new com.pizza.Pizza.Address(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.street1_ = street1_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.street2_ = street2_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.street3_ = street3_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.city_ = city_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.postalCode_ = postalCode_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.state_ = state_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        result.country_ = country_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.pizza.Pizza.Address) {
-          return mergeFrom((com.pizza.Pizza.Address)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.pizza.Pizza.Address other) {
-        if (other == com.pizza.Pizza.Address.getDefaultInstance()) return this;
-        if (other.hasStreet1()) {
-          bitField0_ |= 0x00000001;
-          street1_ = other.street1_;
-          onChanged();
-        }
-        if (other.hasStreet2()) {
-          bitField0_ |= 0x00000002;
-          street2_ = other.street2_;
-          onChanged();
-        }
-        if (other.hasStreet3()) {
-          bitField0_ |= 0x00000004;
-          street3_ = other.street3_;
-          onChanged();
-        }
-        if (other.hasCity()) {
-          bitField0_ |= 0x00000008;
-          city_ = other.city_;
-          onChanged();
-        }
-        if (other.hasPostalCode()) {
-          bitField0_ |= 0x00000010;
-          postalCode_ = other.postalCode_;
-          onChanged();
-        }
-        if (other.hasState()) {
-          bitField0_ |= 0x00000020;
-          state_ = other.state_;
-          onChanged();
-        }
-        if (other.hasCountry()) {
-          bitField0_ |= 0x00000040;
-          country_ = other.country_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.pizza.Pizza.Address parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.pizza.Pizza.Address) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
+      
       private int bitField0_;
-
+      
       // optional string street1 = 1;
       private java.lang.Object street1_ = "";
-      /**
-       * <code>optional string street1 = 1;</code>
-       */
       public boolean hasStreet1() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      /**
-       * <code>optional string street1 = 1;</code>
-       */
-      public java.lang.String getStreet1() {
+      public String getStreet1() {
         java.lang.Object ref = street1_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           street1_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string street1 = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getStreet1Bytes() {
-        java.lang.Object ref = street1_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          street1_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string street1 = 1;</code>
-       */
-      public Builder setStreet1(
-          java.lang.String value) {
+      public Builder setStreet1(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1720,72 +1271,34 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string street1 = 1;</code>
-       */
       public Builder clearStreet1() {
         bitField0_ = (bitField0_ & ~0x00000001);
         street1_ = getDefaultInstance().getStreet1();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string street1 = 1;</code>
-       */
-      public Builder setStreet1Bytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      void setStreet1(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000001;
         street1_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional string street2 = 2;
       private java.lang.Object street2_ = "";
-      /**
-       * <code>optional string street2 = 2;</code>
-       */
       public boolean hasStreet2() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      /**
-       * <code>optional string street2 = 2;</code>
-       */
-      public java.lang.String getStreet2() {
+      public String getStreet2() {
         java.lang.Object ref = street2_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           street2_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string street2 = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getStreet2Bytes() {
-        java.lang.Object ref = street2_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          street2_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string street2 = 2;</code>
-       */
-      public Builder setStreet2(
-          java.lang.String value) {
+      public Builder setStreet2(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1794,72 +1307,34 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string street2 = 2;</code>
-       */
       public Builder clearStreet2() {
         bitField0_ = (bitField0_ & ~0x00000002);
         street2_ = getDefaultInstance().getStreet2();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string street2 = 2;</code>
-       */
-      public Builder setStreet2Bytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      void setStreet2(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000002;
         street2_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional string street3 = 3;
       private java.lang.Object street3_ = "";
-      /**
-       * <code>optional string street3 = 3;</code>
-       */
       public boolean hasStreet3() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      /**
-       * <code>optional string street3 = 3;</code>
-       */
-      public java.lang.String getStreet3() {
+      public String getStreet3() {
         java.lang.Object ref = street3_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           street3_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string street3 = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getStreet3Bytes() {
-        java.lang.Object ref = street3_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          street3_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string street3 = 3;</code>
-       */
-      public Builder setStreet3(
-          java.lang.String value) {
+      public Builder setStreet3(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1868,72 +1343,34 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string street3 = 3;</code>
-       */
       public Builder clearStreet3() {
         bitField0_ = (bitField0_ & ~0x00000004);
         street3_ = getDefaultInstance().getStreet3();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string street3 = 3;</code>
-       */
-      public Builder setStreet3Bytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      void setStreet3(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000004;
         street3_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional string city = 4;
       private java.lang.Object city_ = "";
-      /**
-       * <code>optional string city = 4;</code>
-       */
       public boolean hasCity() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      /**
-       * <code>optional string city = 4;</code>
-       */
-      public java.lang.String getCity() {
+      public String getCity() {
         java.lang.Object ref = city_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           city_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string city = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getCityBytes() {
-        java.lang.Object ref = city_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          city_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string city = 4;</code>
-       */
-      public Builder setCity(
-          java.lang.String value) {
+      public Builder setCity(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1942,72 +1379,34 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string city = 4;</code>
-       */
       public Builder clearCity() {
         bitField0_ = (bitField0_ & ~0x00000008);
         city_ = getDefaultInstance().getCity();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string city = 4;</code>
-       */
-      public Builder setCityBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      void setCity(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000008;
         city_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional string postal_code = 5;
       private java.lang.Object postalCode_ = "";
-      /**
-       * <code>optional string postal_code = 5;</code>
-       */
       public boolean hasPostalCode() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      /**
-       * <code>optional string postal_code = 5;</code>
-       */
-      public java.lang.String getPostalCode() {
+      public String getPostalCode() {
         java.lang.Object ref = postalCode_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           postalCode_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string postal_code = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPostalCodeBytes() {
-        java.lang.Object ref = postalCode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          postalCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string postal_code = 5;</code>
-       */
-      public Builder setPostalCode(
-          java.lang.String value) {
+      public Builder setPostalCode(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2016,72 +1415,34 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string postal_code = 5;</code>
-       */
       public Builder clearPostalCode() {
         bitField0_ = (bitField0_ & ~0x00000010);
         postalCode_ = getDefaultInstance().getPostalCode();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string postal_code = 5;</code>
-       */
-      public Builder setPostalCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      void setPostalCode(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000010;
         postalCode_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional string state = 6;
       private java.lang.Object state_ = "";
-      /**
-       * <code>optional string state = 6;</code>
-       */
       public boolean hasState() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
-      /**
-       * <code>optional string state = 6;</code>
-       */
-      public java.lang.String getState() {
+      public String getState() {
         java.lang.Object ref = state_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           state_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string state = 6;</code>
-       */
-      public com.google.protobuf.ByteString
-          getStateBytes() {
-        java.lang.Object ref = state_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          state_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string state = 6;</code>
-       */
-      public Builder setState(
-          java.lang.String value) {
+      public Builder setState(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2090,72 +1451,34 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string state = 6;</code>
-       */
       public Builder clearState() {
         bitField0_ = (bitField0_ & ~0x00000020);
         state_ = getDefaultInstance().getState();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string state = 6;</code>
-       */
-      public Builder setStateBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      void setState(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000020;
         state_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional string country = 7;
       private java.lang.Object country_ = "";
-      /**
-       * <code>optional string country = 7;</code>
-       */
       public boolean hasCountry() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
-      /**
-       * <code>optional string country = 7;</code>
-       */
-      public java.lang.String getCountry() {
+      public String getCountry() {
         java.lang.Object ref = country_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           country_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string country = 7;</code>
-       */
-      public com.google.protobuf.ByteString
-          getCountryBytes() {
-        java.lang.Object ref = country_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          country_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string country = 7;</code>
-       */
-      public Builder setCountry(
-          java.lang.String value) {
+      public Builder setCountry(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2164,228 +1487,111 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string country = 7;</code>
-       */
       public Builder clearCountry() {
         bitField0_ = (bitField0_ & ~0x00000040);
         country_ = getDefaultInstance().getCountry();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string country = 7;</code>
-       */
-      public Builder setCountryBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      void setCountry(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000040;
         country_ = value;
         onChanged();
-        return this;
       }
-
+      
       // @@protoc_insertion_point(builder_scope:example.pizza.Address)
     }
-
+    
     static {
       defaultInstance = new Address(true);
       defaultInstance.initFields();
     }
-
+    
     // @@protoc_insertion_point(class_scope:example.pizza.Address)
   }
-
+  
   public interface LineItemOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-
+    
     // optional string item = 1;
-    /**
-     * <code>optional string item = 1;</code>
-     */
     boolean hasItem();
-    /**
-     * <code>optional string item = 1;</code>
-     */
-    java.lang.String getItem();
-    /**
-     * <code>optional string item = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getItemBytes();
-
+    String getItem();
+    
     // optional int32 quantity = 2;
-    /**
-     * <code>optional int32 quantity = 2;</code>
-     */
     boolean hasQuantity();
-    /**
-     * <code>optional int32 quantity = 2;</code>
-     */
     int getQuantity();
   }
-  /**
-   * Protobuf type {@code example.pizza.LineItem}
-   */
   public static final class LineItem extends
       com.google.protobuf.GeneratedMessage
       implements LineItemOrBuilder {
     // Use LineItem.newBuilder() to construct.
-    private LineItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private LineItem(Builder builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private LineItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
+    private LineItem(boolean noInit) {}
+    
     private static final LineItem defaultInstance;
     public static LineItem getDefaultInstance() {
       return defaultInstance;
     }
-
+    
     public LineItem getDefaultInstanceForType() {
       return defaultInstance;
     }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LineItem(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              item_ = input.readBytes();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              quantity_ = input.readInt32();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
+    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.pizza.Pizza.internal_static_example_pizza_LineItem_descriptor;
     }
-
+    
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.pizza.Pizza.internal_static_example_pizza_LineItem_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.pizza.Pizza.LineItem.class, com.pizza.Pizza.LineItem.Builder.class);
+      return com.pizza.Pizza.internal_static_example_pizza_LineItem_fieldAccessorTable;
     }
-
-    public static com.google.protobuf.Parser<LineItem> PARSER =
-        new com.google.protobuf.AbstractParser<LineItem>() {
-      public LineItem parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LineItem(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<LineItem> getParserForType() {
-      return PARSER;
-    }
-
+    
     private int bitField0_;
     // optional string item = 1;
     public static final int ITEM_FIELD_NUMBER = 1;
     private java.lang.Object item_;
-    /**
-     * <code>optional string item = 1;</code>
-     */
     public boolean hasItem() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    /**
-     * <code>optional string item = 1;</code>
-     */
-    public java.lang.String getItem() {
+    public String getItem() {
       java.lang.Object ref = item_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
           item_ = s;
         }
         return s;
       }
     }
-    /**
-     * <code>optional string item = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getItemBytes() {
+    private com.google.protobuf.ByteString getItemBytes() {
       java.lang.Object ref = item_;
-      if (ref instanceof java.lang.String) {
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
         item_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
+    
     // optional int32 quantity = 2;
     public static final int QUANTITY_FIELD_NUMBER = 2;
     private int quantity_;
-    /**
-     * <code>optional int32 quantity = 2;</code>
-     */
     public boolean hasQuantity() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    /**
-     * <code>optional int32 quantity = 2;</code>
-     */
     public int getQuantity() {
       return quantity_;
     }
-
+    
     private void initFields() {
       item_ = "";
       quantity_ = 0;
@@ -2394,11 +1600,11 @@ public final class Pizza {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-
+      
       memoizedIsInitialized = 1;
       return true;
     }
-
+    
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2410,12 +1616,12 @@ public final class Pizza {
       }
       getUnknownFields().writeTo(output);
     }
-
+    
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-
+    
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2429,83 +1635,94 @@ public final class Pizza {
       memoizedSerializedSize = size;
       return size;
     }
-
+    
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-
+    
     public static com.pizza.Pizza.LineItem parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return newBuilder().mergeFrom(data).buildParsed();
     }
     public static com.pizza.Pizza.LineItem parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.LineItem parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return newBuilder().mergeFrom(data).buildParsed();
     }
     public static com.pizza.Pizza.LineItem parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.LineItem parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return newBuilder().mergeFrom(input).buildParsed();
     }
     public static com.pizza.Pizza.LineItem parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.LineItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
     }
     public static com.pizza.Pizza.LineItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
     }
     public static com.pizza.Pizza.LineItem parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return newBuilder().mergeFrom(input).buildParsed();
     }
     public static com.pizza.Pizza.LineItem parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
     }
-
+    
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(com.pizza.Pizza.LineItem prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-
+    
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-    /**
-     * Protobuf type {@code example.pizza.LineItem}
-     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements com.pizza.Pizza.LineItemOrBuilder {
@@ -2513,21 +1730,18 @@ public final class Pizza {
           getDescriptor() {
         return com.pizza.Pizza.internal_static_example_pizza_LineItem_descriptor;
       }
-
+      
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.pizza.Pizza.internal_static_example_pizza_LineItem_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.pizza.Pizza.LineItem.class, com.pizza.Pizza.LineItem.Builder.class);
+        return com.pizza.Pizza.internal_static_example_pizza_LineItem_fieldAccessorTable;
       }
-
+      
       // Construct using com.pizza.Pizza.LineItem.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      
+      private Builder(BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2538,7 +1752,7 @@ public final class Pizza {
       private static Builder create() {
         return new Builder();
       }
-
+      
       public Builder clear() {
         super.clear();
         item_ = "";
@@ -2547,20 +1761,20 @@ public final class Pizza {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-
+      
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-
+      
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.pizza.Pizza.internal_static_example_pizza_LineItem_descriptor;
+        return com.pizza.Pizza.LineItem.getDescriptor();
       }
-
+      
       public com.pizza.Pizza.LineItem getDefaultInstanceForType() {
         return com.pizza.Pizza.LineItem.getDefaultInstance();
       }
-
+      
       public com.pizza.Pizza.LineItem build() {
         com.pizza.Pizza.LineItem result = buildPartial();
         if (!result.isInitialized()) {
@@ -2568,7 +1782,17 @@ public final class Pizza {
         }
         return result;
       }
-
+      
+      private com.pizza.Pizza.LineItem buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.pizza.Pizza.LineItem result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
       public com.pizza.Pizza.LineItem buildPartial() {
         com.pizza.Pizza.LineItem result = new com.pizza.Pizza.LineItem(this);
         int from_bitField0_ = bitField0_;
@@ -2585,7 +1809,7 @@ public final class Pizza {
         onBuilt();
         return result;
       }
-
+      
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.pizza.Pizza.LineItem) {
           return mergeFrom((com.pizza.Pizza.LineItem)other);
@@ -2594,13 +1818,11 @@ public final class Pizza {
           return this;
         }
       }
-
+      
       public Builder mergeFrom(com.pizza.Pizza.LineItem other) {
         if (other == com.pizza.Pizza.LineItem.getDefaultInstance()) return this;
         if (other.hasItem()) {
-          bitField0_ |= 0x00000001;
-          item_ = other.item_;
-          onChanged();
+          setItem(other.getItem());
         }
         if (other.hasQuantity()) {
           setQuantity(other.getQuantity());
@@ -2608,73 +1830,66 @@ public final class Pizza {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-
+      
       public final boolean isInitialized() {
         return true;
       }
-
+      
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.pizza.Pizza.LineItem parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.pizza.Pizza.LineItem) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              item_ = input.readBytes();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              quantity_ = input.readInt32();
+              break;
+            }
           }
         }
-        return this;
       }
+      
       private int bitField0_;
-
+      
       // optional string item = 1;
       private java.lang.Object item_ = "";
-      /**
-       * <code>optional string item = 1;</code>
-       */
       public boolean hasItem() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      /**
-       * <code>optional string item = 1;</code>
-       */
-      public java.lang.String getItem() {
+      public String getItem() {
         java.lang.Object ref = item_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           item_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string item = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getItemBytes() {
-        java.lang.Object ref = item_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          item_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string item = 1;</code>
-       */
-      public Builder setItem(
-          java.lang.String value) {
+      public Builder setItem(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2683,337 +1898,149 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string item = 1;</code>
-       */
       public Builder clearItem() {
         bitField0_ = (bitField0_ & ~0x00000001);
         item_ = getDefaultInstance().getItem();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string item = 1;</code>
-       */
-      public Builder setItemBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      void setItem(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000001;
         item_ = value;
         onChanged();
-        return this;
       }
-
+      
       // optional int32 quantity = 2;
       private int quantity_ ;
-      /**
-       * <code>optional int32 quantity = 2;</code>
-       */
       public boolean hasQuantity() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      /**
-       * <code>optional int32 quantity = 2;</code>
-       */
       public int getQuantity() {
         return quantity_;
       }
-      /**
-       * <code>optional int32 quantity = 2;</code>
-       */
       public Builder setQuantity(int value) {
         bitField0_ |= 0x00000002;
         quantity_ = value;
         onChanged();
         return this;
       }
-      /**
-       * <code>optional int32 quantity = 2;</code>
-       */
       public Builder clearQuantity() {
         bitField0_ = (bitField0_ & ~0x00000002);
         quantity_ = 0;
         onChanged();
         return this;
       }
-
+      
       // @@protoc_insertion_point(builder_scope:example.pizza.LineItem)
     }
-
+    
     static {
       defaultInstance = new LineItem(true);
       defaultInstance.initFields();
     }
-
+    
     // @@protoc_insertion_point(class_scope:example.pizza.LineItem)
   }
-
+  
   public interface OrderRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-
+    
     // optional .example.pizza.Person person = 1;
-    /**
-     * <code>optional .example.pizza.Person person = 1;</code>
-     */
     boolean hasPerson();
-    /**
-     * <code>optional .example.pizza.Person person = 1;</code>
-     */
     com.pizza.Pizza.Person getPerson();
-    /**
-     * <code>optional .example.pizza.Person person = 1;</code>
-     */
     com.pizza.Pizza.PersonOrBuilder getPersonOrBuilder();
-
+    
     // optional .example.pizza.Address address = 2;
-    /**
-     * <code>optional .example.pizza.Address address = 2;</code>
-     */
     boolean hasAddress();
-    /**
-     * <code>optional .example.pizza.Address address = 2;</code>
-     */
     com.pizza.Pizza.Address getAddress();
-    /**
-     * <code>optional .example.pizza.Address address = 2;</code>
-     */
     com.pizza.Pizza.AddressOrBuilder getAddressOrBuilder();
-
+    
     // repeated .example.pizza.LineItem line_items = 3;
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     java.util.List<com.pizza.Pizza.LineItem> 
         getLineItemsList();
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     com.pizza.Pizza.LineItem getLineItems(int index);
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     int getLineItemsCount();
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     java.util.List<? extends com.pizza.Pizza.LineItemOrBuilder> 
         getLineItemsOrBuilderList();
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     com.pizza.Pizza.LineItemOrBuilder getLineItemsOrBuilder(
         int index);
   }
-  /**
-   * Protobuf type {@code example.pizza.OrderRequest}
-   */
   public static final class OrderRequest extends
       com.google.protobuf.GeneratedMessage
       implements OrderRequestOrBuilder {
     // Use OrderRequest.newBuilder() to construct.
-    private OrderRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private OrderRequest(Builder builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private OrderRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
+    private OrderRequest(boolean noInit) {}
+    
     private static final OrderRequest defaultInstance;
     public static OrderRequest getDefaultInstance() {
       return defaultInstance;
     }
-
+    
     public OrderRequest getDefaultInstanceForType() {
       return defaultInstance;
     }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private OrderRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.pizza.Pizza.Person.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = person_.toBuilder();
-              }
-              person_ = input.readMessage(com.pizza.Pizza.Person.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(person_);
-                person_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              com.pizza.Pizza.Address.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = address_.toBuilder();
-              }
-              address_ = input.readMessage(com.pizza.Pizza.Address.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(address_);
-                address_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                lineItems_ = new java.util.ArrayList<com.pizza.Pizza.LineItem>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              lineItems_.add(input.readMessage(com.pizza.Pizza.LineItem.PARSER, extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          lineItems_ = java.util.Collections.unmodifiableList(lineItems_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
+    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.pizza.Pizza.internal_static_example_pizza_OrderRequest_descriptor;
     }
-
+    
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.pizza.Pizza.internal_static_example_pizza_OrderRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.pizza.Pizza.OrderRequest.class, com.pizza.Pizza.OrderRequest.Builder.class);
+      return com.pizza.Pizza.internal_static_example_pizza_OrderRequest_fieldAccessorTable;
     }
-
-    public static com.google.protobuf.Parser<OrderRequest> PARSER =
-        new com.google.protobuf.AbstractParser<OrderRequest>() {
-      public OrderRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new OrderRequest(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<OrderRequest> getParserForType() {
-      return PARSER;
-    }
-
+    
     private int bitField0_;
     // optional .example.pizza.Person person = 1;
     public static final int PERSON_FIELD_NUMBER = 1;
     private com.pizza.Pizza.Person person_;
-    /**
-     * <code>optional .example.pizza.Person person = 1;</code>
-     */
     public boolean hasPerson() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    /**
-     * <code>optional .example.pizza.Person person = 1;</code>
-     */
     public com.pizza.Pizza.Person getPerson() {
       return person_;
     }
-    /**
-     * <code>optional .example.pizza.Person person = 1;</code>
-     */
     public com.pizza.Pizza.PersonOrBuilder getPersonOrBuilder() {
       return person_;
     }
-
+    
     // optional .example.pizza.Address address = 2;
     public static final int ADDRESS_FIELD_NUMBER = 2;
     private com.pizza.Pizza.Address address_;
-    /**
-     * <code>optional .example.pizza.Address address = 2;</code>
-     */
     public boolean hasAddress() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    /**
-     * <code>optional .example.pizza.Address address = 2;</code>
-     */
     public com.pizza.Pizza.Address getAddress() {
       return address_;
     }
-    /**
-     * <code>optional .example.pizza.Address address = 2;</code>
-     */
     public com.pizza.Pizza.AddressOrBuilder getAddressOrBuilder() {
       return address_;
     }
-
+    
     // repeated .example.pizza.LineItem line_items = 3;
     public static final int LINE_ITEMS_FIELD_NUMBER = 3;
     private java.util.List<com.pizza.Pizza.LineItem> lineItems_;
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     public java.util.List<com.pizza.Pizza.LineItem> getLineItemsList() {
       return lineItems_;
     }
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     public java.util.List<? extends com.pizza.Pizza.LineItemOrBuilder> 
         getLineItemsOrBuilderList() {
       return lineItems_;
     }
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     public int getLineItemsCount() {
       return lineItems_.size();
     }
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     public com.pizza.Pizza.LineItem getLineItems(int index) {
       return lineItems_.get(index);
     }
-    /**
-     * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-     */
     public com.pizza.Pizza.LineItemOrBuilder getLineItemsOrBuilder(
         int index) {
       return lineItems_.get(index);
     }
-
+    
     private void initFields() {
       person_ = com.pizza.Pizza.Person.getDefaultInstance();
       address_ = com.pizza.Pizza.Address.getDefaultInstance();
@@ -3023,11 +2050,11 @@ public final class Pizza {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-
+      
       memoizedIsInitialized = 1;
       return true;
     }
-
+    
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -3042,12 +2069,12 @@ public final class Pizza {
       }
       getUnknownFields().writeTo(output);
     }
-
+    
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-
+    
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -3065,83 +2092,94 @@ public final class Pizza {
       memoizedSerializedSize = size;
       return size;
     }
-
+    
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-
+    
     public static com.pizza.Pizza.OrderRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return newBuilder().mergeFrom(data).buildParsed();
     }
     public static com.pizza.Pizza.OrderRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.OrderRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return newBuilder().mergeFrom(data).buildParsed();
     }
     public static com.pizza.Pizza.OrderRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.OrderRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return newBuilder().mergeFrom(input).buildParsed();
     }
     public static com.pizza.Pizza.OrderRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.OrderRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
     }
     public static com.pizza.Pizza.OrderRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
     }
     public static com.pizza.Pizza.OrderRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return newBuilder().mergeFrom(input).buildParsed();
     }
     public static com.pizza.Pizza.OrderRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
     }
-
+    
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(com.pizza.Pizza.OrderRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-
+    
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-    /**
-     * Protobuf type {@code example.pizza.OrderRequest}
-     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements com.pizza.Pizza.OrderRequestOrBuilder {
@@ -3149,21 +2187,18 @@ public final class Pizza {
           getDescriptor() {
         return com.pizza.Pizza.internal_static_example_pizza_OrderRequest_descriptor;
       }
-
+      
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.pizza.Pizza.internal_static_example_pizza_OrderRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.pizza.Pizza.OrderRequest.class, com.pizza.Pizza.OrderRequest.Builder.class);
+        return com.pizza.Pizza.internal_static_example_pizza_OrderRequest_fieldAccessorTable;
       }
-
+      
       // Construct using com.pizza.Pizza.OrderRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      
+      private Builder(BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3177,7 +2212,7 @@ public final class Pizza {
       private static Builder create() {
         return new Builder();
       }
-
+      
       public Builder clear() {
         super.clear();
         if (personBuilder_ == null) {
@@ -3200,20 +2235,20 @@ public final class Pizza {
         }
         return this;
       }
-
+      
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-
+      
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.pizza.Pizza.internal_static_example_pizza_OrderRequest_descriptor;
+        return com.pizza.Pizza.OrderRequest.getDescriptor();
       }
-
+      
       public com.pizza.Pizza.OrderRequest getDefaultInstanceForType() {
         return com.pizza.Pizza.OrderRequest.getDefaultInstance();
       }
-
+      
       public com.pizza.Pizza.OrderRequest build() {
         com.pizza.Pizza.OrderRequest result = buildPartial();
         if (!result.isInitialized()) {
@@ -3221,7 +2256,17 @@ public final class Pizza {
         }
         return result;
       }
-
+      
+      private com.pizza.Pizza.OrderRequest buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.pizza.Pizza.OrderRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
       public com.pizza.Pizza.OrderRequest buildPartial() {
         com.pizza.Pizza.OrderRequest result = new com.pizza.Pizza.OrderRequest(this);
         int from_bitField0_ = bitField0_;
@@ -3255,7 +2300,7 @@ public final class Pizza {
         onBuilt();
         return result;
       }
-
+      
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.pizza.Pizza.OrderRequest) {
           return mergeFrom((com.pizza.Pizza.OrderRequest)other);
@@ -3264,7 +2309,7 @@ public final class Pizza {
           return this;
         }
       }
-
+      
       public Builder mergeFrom(com.pizza.Pizza.OrderRequest other) {
         if (other == com.pizza.Pizza.OrderRequest.getDefaultInstance()) return this;
         if (other.hasPerson()) {
@@ -3302,43 +2347,71 @@ public final class Pizza {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-
+      
       public final boolean isInitialized() {
         return true;
       }
-
+      
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.pizza.Pizza.OrderRequest parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.pizza.Pizza.OrderRequest) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              com.pizza.Pizza.Person.Builder subBuilder = com.pizza.Pizza.Person.newBuilder();
+              if (hasPerson()) {
+                subBuilder.mergeFrom(getPerson());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setPerson(subBuilder.buildPartial());
+              break;
+            }
+            case 18: {
+              com.pizza.Pizza.Address.Builder subBuilder = com.pizza.Pizza.Address.newBuilder();
+              if (hasAddress()) {
+                subBuilder.mergeFrom(getAddress());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setAddress(subBuilder.buildPartial());
+              break;
+            }
+            case 26: {
+              com.pizza.Pizza.LineItem.Builder subBuilder = com.pizza.Pizza.LineItem.newBuilder();
+              input.readMessage(subBuilder, extensionRegistry);
+              addLineItems(subBuilder.buildPartial());
+              break;
+            }
           }
         }
-        return this;
       }
+      
       private int bitField0_;
-
+      
       // optional .example.pizza.Person person = 1;
       private com.pizza.Pizza.Person person_ = com.pizza.Pizza.Person.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.pizza.Pizza.Person, com.pizza.Pizza.Person.Builder, com.pizza.Pizza.PersonOrBuilder> personBuilder_;
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       public boolean hasPerson() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       public com.pizza.Pizza.Person getPerson() {
         if (personBuilder_ == null) {
           return person_;
@@ -3346,9 +2419,6 @@ public final class Pizza {
           return personBuilder_.getMessage();
         }
       }
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       public Builder setPerson(com.pizza.Pizza.Person value) {
         if (personBuilder_ == null) {
           if (value == null) {
@@ -3362,9 +2432,6 @@ public final class Pizza {
         bitField0_ |= 0x00000001;
         return this;
       }
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       public Builder setPerson(
           com.pizza.Pizza.Person.Builder builderForValue) {
         if (personBuilder_ == null) {
@@ -3376,9 +2443,6 @@ public final class Pizza {
         bitField0_ |= 0x00000001;
         return this;
       }
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       public Builder mergePerson(com.pizza.Pizza.Person value) {
         if (personBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -3395,9 +2459,6 @@ public final class Pizza {
         bitField0_ |= 0x00000001;
         return this;
       }
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       public Builder clearPerson() {
         if (personBuilder_ == null) {
           person_ = com.pizza.Pizza.Person.getDefaultInstance();
@@ -3408,17 +2469,11 @@ public final class Pizza {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       public com.pizza.Pizza.Person.Builder getPersonBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       public com.pizza.Pizza.PersonOrBuilder getPersonOrBuilder() {
         if (personBuilder_ != null) {
           return personBuilder_.getMessageOrBuilder();
@@ -3426,9 +2481,6 @@ public final class Pizza {
           return person_;
         }
       }
-      /**
-       * <code>optional .example.pizza.Person person = 1;</code>
-       */
       private com.google.protobuf.SingleFieldBuilder<
           com.pizza.Pizza.Person, com.pizza.Pizza.Person.Builder, com.pizza.Pizza.PersonOrBuilder> 
           getPersonFieldBuilder() {
@@ -3442,20 +2494,14 @@ public final class Pizza {
         }
         return personBuilder_;
       }
-
+      
       // optional .example.pizza.Address address = 2;
       private com.pizza.Pizza.Address address_ = com.pizza.Pizza.Address.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.pizza.Pizza.Address, com.pizza.Pizza.Address.Builder, com.pizza.Pizza.AddressOrBuilder> addressBuilder_;
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       public boolean hasAddress() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       public com.pizza.Pizza.Address getAddress() {
         if (addressBuilder_ == null) {
           return address_;
@@ -3463,9 +2509,6 @@ public final class Pizza {
           return addressBuilder_.getMessage();
         }
       }
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       public Builder setAddress(com.pizza.Pizza.Address value) {
         if (addressBuilder_ == null) {
           if (value == null) {
@@ -3479,9 +2522,6 @@ public final class Pizza {
         bitField0_ |= 0x00000002;
         return this;
       }
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       public Builder setAddress(
           com.pizza.Pizza.Address.Builder builderForValue) {
         if (addressBuilder_ == null) {
@@ -3493,9 +2533,6 @@ public final class Pizza {
         bitField0_ |= 0x00000002;
         return this;
       }
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       public Builder mergeAddress(com.pizza.Pizza.Address value) {
         if (addressBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
@@ -3512,9 +2549,6 @@ public final class Pizza {
         bitField0_ |= 0x00000002;
         return this;
       }
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       public Builder clearAddress() {
         if (addressBuilder_ == null) {
           address_ = com.pizza.Pizza.Address.getDefaultInstance();
@@ -3525,17 +2559,11 @@ public final class Pizza {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       public com.pizza.Pizza.Address.Builder getAddressBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getAddressFieldBuilder().getBuilder();
       }
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       public com.pizza.Pizza.AddressOrBuilder getAddressOrBuilder() {
         if (addressBuilder_ != null) {
           return addressBuilder_.getMessageOrBuilder();
@@ -3543,9 +2571,6 @@ public final class Pizza {
           return address_;
         }
       }
-      /**
-       * <code>optional .example.pizza.Address address = 2;</code>
-       */
       private com.google.protobuf.SingleFieldBuilder<
           com.pizza.Pizza.Address, com.pizza.Pizza.Address.Builder, com.pizza.Pizza.AddressOrBuilder> 
           getAddressFieldBuilder() {
@@ -3559,7 +2584,7 @@ public final class Pizza {
         }
         return addressBuilder_;
       }
-
+      
       // repeated .example.pizza.LineItem line_items = 3;
       private java.util.List<com.pizza.Pizza.LineItem> lineItems_ =
         java.util.Collections.emptyList();
@@ -3569,13 +2594,10 @@ public final class Pizza {
           bitField0_ |= 0x00000004;
          }
       }
-
+      
       private com.google.protobuf.RepeatedFieldBuilder<
           com.pizza.Pizza.LineItem, com.pizza.Pizza.LineItem.Builder, com.pizza.Pizza.LineItemOrBuilder> lineItemsBuilder_;
-
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
+      
       public java.util.List<com.pizza.Pizza.LineItem> getLineItemsList() {
         if (lineItemsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(lineItems_);
@@ -3583,9 +2605,6 @@ public final class Pizza {
           return lineItemsBuilder_.getMessageList();
         }
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public int getLineItemsCount() {
         if (lineItemsBuilder_ == null) {
           return lineItems_.size();
@@ -3593,9 +2612,6 @@ public final class Pizza {
           return lineItemsBuilder_.getCount();
         }
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public com.pizza.Pizza.LineItem getLineItems(int index) {
         if (lineItemsBuilder_ == null) {
           return lineItems_.get(index);
@@ -3603,9 +2619,6 @@ public final class Pizza {
           return lineItemsBuilder_.getMessage(index);
         }
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder setLineItems(
           int index, com.pizza.Pizza.LineItem value) {
         if (lineItemsBuilder_ == null) {
@@ -3620,9 +2633,6 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder setLineItems(
           int index, com.pizza.Pizza.LineItem.Builder builderForValue) {
         if (lineItemsBuilder_ == null) {
@@ -3634,9 +2644,6 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder addLineItems(com.pizza.Pizza.LineItem value) {
         if (lineItemsBuilder_ == null) {
           if (value == null) {
@@ -3650,9 +2657,6 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder addLineItems(
           int index, com.pizza.Pizza.LineItem value) {
         if (lineItemsBuilder_ == null) {
@@ -3667,9 +2671,6 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder addLineItems(
           com.pizza.Pizza.LineItem.Builder builderForValue) {
         if (lineItemsBuilder_ == null) {
@@ -3681,9 +2682,6 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder addLineItems(
           int index, com.pizza.Pizza.LineItem.Builder builderForValue) {
         if (lineItemsBuilder_ == null) {
@@ -3695,9 +2693,6 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder addAllLineItems(
           java.lang.Iterable<? extends com.pizza.Pizza.LineItem> values) {
         if (lineItemsBuilder_ == null) {
@@ -3709,9 +2704,6 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder clearLineItems() {
         if (lineItemsBuilder_ == null) {
           lineItems_ = java.util.Collections.emptyList();
@@ -3722,9 +2714,6 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public Builder removeLineItems(int index) {
         if (lineItemsBuilder_ == null) {
           ensureLineItemsIsMutable();
@@ -3735,16 +2724,10 @@ public final class Pizza {
         }
         return this;
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public com.pizza.Pizza.LineItem.Builder getLineItemsBuilder(
           int index) {
         return getLineItemsFieldBuilder().getBuilder(index);
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public com.pizza.Pizza.LineItemOrBuilder getLineItemsOrBuilder(
           int index) {
         if (lineItemsBuilder_ == null) {
@@ -3752,9 +2735,6 @@ public final class Pizza {
           return lineItemsBuilder_.getMessageOrBuilder(index);
         }
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public java.util.List<? extends com.pizza.Pizza.LineItemOrBuilder> 
            getLineItemsOrBuilderList() {
         if (lineItemsBuilder_ != null) {
@@ -3763,24 +2743,15 @@ public final class Pizza {
           return java.util.Collections.unmodifiableList(lineItems_);
         }
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public com.pizza.Pizza.LineItem.Builder addLineItemsBuilder() {
         return getLineItemsFieldBuilder().addBuilder(
             com.pizza.Pizza.LineItem.getDefaultInstance());
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public com.pizza.Pizza.LineItem.Builder addLineItemsBuilder(
           int index) {
         return getLineItemsFieldBuilder().addBuilder(
             index, com.pizza.Pizza.LineItem.getDefaultInstance());
       }
-      /**
-       * <code>repeated .example.pizza.LineItem line_items = 3;</code>
-       */
       public java.util.List<com.pizza.Pizza.LineItem.Builder> 
            getLineItemsBuilderList() {
         return getLineItemsFieldBuilder().getBuilderList();
@@ -3799,269 +2770,136 @@ public final class Pizza {
         }
         return lineItemsBuilder_;
       }
-
+      
       // @@protoc_insertion_point(builder_scope:example.pizza.OrderRequest)
     }
-
+    
     static {
       defaultInstance = new OrderRequest(true);
       defaultInstance.initFields();
     }
-
+    
     // @@protoc_insertion_point(class_scope:example.pizza.OrderRequest)
   }
-
+  
   public interface OrderResponseOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-
+    
     // required string order_id = 1;
-    /**
-     * <code>required string order_id = 1;</code>
-     */
     boolean hasOrderId();
-    /**
-     * <code>required string order_id = 1;</code>
-     */
-    java.lang.String getOrderId();
-    /**
-     * <code>required string order_id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getOrderIdBytes();
-
+    String getOrderId();
+    
     // required bool success = 2;
-    /**
-     * <code>required bool success = 2;</code>
-     */
     boolean hasSuccess();
-    /**
-     * <code>required bool success = 2;</code>
-     */
     boolean getSuccess();
-
+    
     // optional string error_message = 3;
-    /**
-     * <code>optional string error_message = 3;</code>
-     */
     boolean hasErrorMessage();
-    /**
-     * <code>optional string error_message = 3;</code>
-     */
-    java.lang.String getErrorMessage();
-    /**
-     * <code>optional string error_message = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getErrorMessageBytes();
+    String getErrorMessage();
   }
-  /**
-   * Protobuf type {@code example.pizza.OrderResponse}
-   */
   public static final class OrderResponse extends
       com.google.protobuf.GeneratedMessage
       implements OrderResponseOrBuilder {
     // Use OrderResponse.newBuilder() to construct.
-    private OrderResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private OrderResponse(Builder builder) {
       super(builder);
-      this.unknownFields = builder.getUnknownFields();
     }
-    private OrderResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
+    private OrderResponse(boolean noInit) {}
+    
     private static final OrderResponse defaultInstance;
     public static OrderResponse getDefaultInstance() {
       return defaultInstance;
     }
-
+    
     public OrderResponse getDefaultInstanceForType() {
       return defaultInstance;
     }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private OrderResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              orderId_ = input.readBytes();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              success_ = input.readBool();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              errorMessage_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
+    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.pizza.Pizza.internal_static_example_pizza_OrderResponse_descriptor;
     }
-
+    
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.pizza.Pizza.internal_static_example_pizza_OrderResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.pizza.Pizza.OrderResponse.class, com.pizza.Pizza.OrderResponse.Builder.class);
+      return com.pizza.Pizza.internal_static_example_pizza_OrderResponse_fieldAccessorTable;
     }
-
-    public static com.google.protobuf.Parser<OrderResponse> PARSER =
-        new com.google.protobuf.AbstractParser<OrderResponse>() {
-      public OrderResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new OrderResponse(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<OrderResponse> getParserForType() {
-      return PARSER;
-    }
-
+    
     private int bitField0_;
     // required string order_id = 1;
     public static final int ORDER_ID_FIELD_NUMBER = 1;
     private java.lang.Object orderId_;
-    /**
-     * <code>required string order_id = 1;</code>
-     */
     public boolean hasOrderId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    /**
-     * <code>required string order_id = 1;</code>
-     */
-    public java.lang.String getOrderId() {
+    public String getOrderId() {
       java.lang.Object ref = orderId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
           orderId_ = s;
         }
         return s;
       }
     }
-    /**
-     * <code>required string order_id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getOrderIdBytes() {
+    private com.google.protobuf.ByteString getOrderIdBytes() {
       java.lang.Object ref = orderId_;
-      if (ref instanceof java.lang.String) {
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
         orderId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
+    
     // required bool success = 2;
     public static final int SUCCESS_FIELD_NUMBER = 2;
     private boolean success_;
-    /**
-     * <code>required bool success = 2;</code>
-     */
     public boolean hasSuccess() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    /**
-     * <code>required bool success = 2;</code>
-     */
     public boolean getSuccess() {
       return success_;
     }
-
+    
     // optional string error_message = 3;
     public static final int ERROR_MESSAGE_FIELD_NUMBER = 3;
     private java.lang.Object errorMessage_;
-    /**
-     * <code>optional string error_message = 3;</code>
-     */
     public boolean hasErrorMessage() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    /**
-     * <code>optional string error_message = 3;</code>
-     */
-    public java.lang.String getErrorMessage() {
+    public String getErrorMessage() {
       java.lang.Object ref = errorMessage_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
           errorMessage_ = s;
         }
         return s;
       }
     }
-    /**
-     * <code>optional string error_message = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getErrorMessageBytes() {
+    private com.google.protobuf.ByteString getErrorMessageBytes() {
       java.lang.Object ref = errorMessage_;
-      if (ref instanceof java.lang.String) {
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
         errorMessage_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
+    
     private void initFields() {
       orderId_ = "";
       success_ = false;
@@ -4071,7 +2909,7 @@ public final class Pizza {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-
+      
       if (!hasOrderId()) {
         memoizedIsInitialized = 0;
         return false;
@@ -4083,7 +2921,7 @@ public final class Pizza {
       memoizedIsInitialized = 1;
       return true;
     }
-
+    
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -4098,12 +2936,12 @@ public final class Pizza {
       }
       getUnknownFields().writeTo(output);
     }
-
+    
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-
+    
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -4121,83 +2959,94 @@ public final class Pizza {
       memoizedSerializedSize = size;
       return size;
     }
-
+    
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-
+    
     public static com.pizza.Pizza.OrderResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return newBuilder().mergeFrom(data).buildParsed();
     }
     public static com.pizza.Pizza.OrderResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.OrderResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return newBuilder().mergeFrom(data).buildParsed();
     }
     public static com.pizza.Pizza.OrderResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.OrderResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return newBuilder().mergeFrom(input).buildParsed();
     }
     public static com.pizza.Pizza.OrderResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
     }
     public static com.pizza.Pizza.OrderResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
     }
     public static com.pizza.Pizza.OrderResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
     }
     public static com.pizza.Pizza.OrderResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return newBuilder().mergeFrom(input).buildParsed();
     }
     public static com.pizza.Pizza.OrderResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
     }
-
+    
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(com.pizza.Pizza.OrderResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-
+    
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
-    /**
-     * Protobuf type {@code example.pizza.OrderResponse}
-     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements com.pizza.Pizza.OrderResponseOrBuilder {
@@ -4205,21 +3054,18 @@ public final class Pizza {
           getDescriptor() {
         return com.pizza.Pizza.internal_static_example_pizza_OrderResponse_descriptor;
       }
-
+      
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.pizza.Pizza.internal_static_example_pizza_OrderResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.pizza.Pizza.OrderResponse.class, com.pizza.Pizza.OrderResponse.Builder.class);
+        return com.pizza.Pizza.internal_static_example_pizza_OrderResponse_fieldAccessorTable;
       }
-
+      
       // Construct using com.pizza.Pizza.OrderResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      
+      private Builder(BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4230,7 +3076,7 @@ public final class Pizza {
       private static Builder create() {
         return new Builder();
       }
-
+      
       public Builder clear() {
         super.clear();
         orderId_ = "";
@@ -4241,20 +3087,20 @@ public final class Pizza {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-
+      
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-
+      
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.pizza.Pizza.internal_static_example_pizza_OrderResponse_descriptor;
+        return com.pizza.Pizza.OrderResponse.getDescriptor();
       }
-
+      
       public com.pizza.Pizza.OrderResponse getDefaultInstanceForType() {
         return com.pizza.Pizza.OrderResponse.getDefaultInstance();
       }
-
+      
       public com.pizza.Pizza.OrderResponse build() {
         com.pizza.Pizza.OrderResponse result = buildPartial();
         if (!result.isInitialized()) {
@@ -4262,7 +3108,17 @@ public final class Pizza {
         }
         return result;
       }
-
+      
+      private com.pizza.Pizza.OrderResponse buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.pizza.Pizza.OrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
       public com.pizza.Pizza.OrderResponse buildPartial() {
         com.pizza.Pizza.OrderResponse result = new com.pizza.Pizza.OrderResponse(this);
         int from_bitField0_ = bitField0_;
@@ -4283,7 +3139,7 @@ public final class Pizza {
         onBuilt();
         return result;
       }
-
+      
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.pizza.Pizza.OrderResponse) {
           return mergeFrom((com.pizza.Pizza.OrderResponse)other);
@@ -4292,26 +3148,22 @@ public final class Pizza {
           return this;
         }
       }
-
+      
       public Builder mergeFrom(com.pizza.Pizza.OrderResponse other) {
         if (other == com.pizza.Pizza.OrderResponse.getDefaultInstance()) return this;
         if (other.hasOrderId()) {
-          bitField0_ |= 0x00000001;
-          orderId_ = other.orderId_;
-          onChanged();
+          setOrderId(other.getOrderId());
         }
         if (other.hasSuccess()) {
           setSuccess(other.getSuccess());
         }
         if (other.hasErrorMessage()) {
-          bitField0_ |= 0x00000004;
-          errorMessage_ = other.errorMessage_;
-          onChanged();
+          setErrorMessage(other.getErrorMessage());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-
+      
       public final boolean isInitialized() {
         if (!hasOrderId()) {
           
@@ -4323,69 +3175,67 @@ public final class Pizza {
         }
         return true;
       }
-
+      
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.pizza.Pizza.OrderResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.pizza.Pizza.OrderResponse) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              orderId_ = input.readBytes();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              success_ = input.readBool();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              errorMessage_ = input.readBytes();
+              break;
+            }
           }
         }
-        return this;
       }
+      
       private int bitField0_;
-
+      
       // required string order_id = 1;
       private java.lang.Object orderId_ = "";
-      /**
-       * <code>required string order_id = 1;</code>
-       */
       public boolean hasOrderId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      /**
-       * <code>required string order_id = 1;</code>
-       */
-      public java.lang.String getOrderId() {
+      public String getOrderId() {
         java.lang.Object ref = orderId_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           orderId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>required string order_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getOrderIdBytes() {
-        java.lang.Object ref = orderId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orderId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string order_id = 1;</code>
-       */
-      public Builder setOrderId(
-          java.lang.String value) {
+      public Builder setOrderId(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4394,105 +3244,55 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>required string order_id = 1;</code>
-       */
       public Builder clearOrderId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         orderId_ = getDefaultInstance().getOrderId();
         onChanged();
         return this;
       }
-      /**
-       * <code>required string order_id = 1;</code>
-       */
-      public Builder setOrderIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      void setOrderId(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000001;
         orderId_ = value;
         onChanged();
-        return this;
       }
-
+      
       // required bool success = 2;
       private boolean success_ ;
-      /**
-       * <code>required bool success = 2;</code>
-       */
       public boolean hasSuccess() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      /**
-       * <code>required bool success = 2;</code>
-       */
       public boolean getSuccess() {
         return success_;
       }
-      /**
-       * <code>required bool success = 2;</code>
-       */
       public Builder setSuccess(boolean value) {
         bitField0_ |= 0x00000002;
         success_ = value;
         onChanged();
         return this;
       }
-      /**
-       * <code>required bool success = 2;</code>
-       */
       public Builder clearSuccess() {
         bitField0_ = (bitField0_ & ~0x00000002);
         success_ = false;
         onChanged();
         return this;
       }
-
+      
       // optional string error_message = 3;
       private java.lang.Object errorMessage_ = "";
-      /**
-       * <code>optional string error_message = 3;</code>
-       */
       public boolean hasErrorMessage() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      /**
-       * <code>optional string error_message = 3;</code>
-       */
-      public java.lang.String getErrorMessage() {
+      public String getErrorMessage() {
         java.lang.Object ref = errorMessage_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
           errorMessage_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
-      /**
-       * <code>optional string error_message = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getErrorMessageBytes() {
-        java.lang.Object ref = errorMessage_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          errorMessage_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string error_message = 3;</code>
-       */
-      public Builder setErrorMessage(
-          java.lang.String value) {
+      public Builder setErrorMessage(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4501,58 +3301,41 @@ public final class Pizza {
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string error_message = 3;</code>
-       */
       public Builder clearErrorMessage() {
         bitField0_ = (bitField0_ & ~0x00000004);
         errorMessage_ = getDefaultInstance().getErrorMessage();
         onChanged();
         return this;
       }
-      /**
-       * <code>optional string error_message = 3;</code>
-       */
-      public Builder setErrorMessageBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      void setErrorMessage(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000004;
         errorMessage_ = value;
         onChanged();
-        return this;
       }
-
+      
       // @@protoc_insertion_point(builder_scope:example.pizza.OrderResponse)
     }
-
+    
     static {
       defaultInstance = new OrderResponse(true);
       defaultInstance.initFields();
     }
-
+    
     // @@protoc_insertion_point(class_scope:example.pizza.OrderResponse)
   }
-
-  /**
-   * Protobuf service {@code example.pizza.OrderingService}
-   */
+  
   public static abstract class OrderingService
       implements com.google.protobuf.Service {
     protected OrderingService() {}
-
+    
     public interface Interface {
-      /**
-       * <code>rpc PlaceOrder(.example.pizza.OrderRequest) returns (.example.pizza.OrderResponse);</code>
-       */
       public abstract void placeOrder(
           com.google.protobuf.RpcController controller,
           com.pizza.Pizza.OrderRequest request,
           com.google.protobuf.RpcCallback<com.pizza.Pizza.OrderResponse> done);
-
+      
     }
-
+    
     public static com.google.protobuf.Service newReflectiveService(
         final Interface impl) {
       return new OrderingService() {
@@ -4563,10 +3346,10 @@ public final class Pizza {
             com.google.protobuf.RpcCallback<com.pizza.Pizza.OrderResponse> done) {
           impl.placeOrder(controller, request, done);
         }
-
+        
       };
     }
-
+    
     public static com.google.protobuf.BlockingService
         newReflectiveBlockingService(final BlockingInterface impl) {
       return new com.google.protobuf.BlockingService() {
@@ -4574,7 +3357,7 @@ public final class Pizza {
             getDescriptorForType() {
           return getDescriptor();
         }
-
+        
         public final com.google.protobuf.Message callBlockingMethod(
             com.google.protobuf.Descriptors.MethodDescriptor method,
             com.google.protobuf.RpcController controller,
@@ -4592,7 +3375,7 @@ public final class Pizza {
               throw new java.lang.AssertionError("Can't get here.");
           }
         }
-
+        
         public final com.google.protobuf.Message
             getRequestPrototype(
             com.google.protobuf.Descriptors.MethodDescriptor method) {
@@ -4608,7 +3391,7 @@ public final class Pizza {
               throw new java.lang.AssertionError("Can't get here.");
           }
         }
-
+        
         public final com.google.protobuf.Message
             getResponsePrototype(
             com.google.protobuf.Descriptors.MethodDescriptor method) {
@@ -4624,18 +3407,15 @@ public final class Pizza {
               throw new java.lang.AssertionError("Can't get here.");
           }
         }
-
+        
       };
     }
-
-    /**
-     * <code>rpc PlaceOrder(.example.pizza.OrderRequest) returns (.example.pizza.OrderResponse);</code>
-     */
+    
     public abstract void placeOrder(
         com.google.protobuf.RpcController controller,
         com.pizza.Pizza.OrderRequest request,
         com.google.protobuf.RpcCallback<com.pizza.Pizza.OrderResponse> done);
-
+    
     public static final
         com.google.protobuf.Descriptors.ServiceDescriptor
         getDescriptor() {
@@ -4645,7 +3425,7 @@ public final class Pizza {
         getDescriptorForType() {
       return getDescriptor();
     }
-
+    
     public final void callMethod(
         com.google.protobuf.Descriptors.MethodDescriptor method,
         com.google.protobuf.RpcController controller,
@@ -4667,7 +3447,7 @@ public final class Pizza {
           throw new java.lang.AssertionError("Can't get here.");
       }
     }
-
+    
     public final com.google.protobuf.Message
         getRequestPrototype(
         com.google.protobuf.Descriptors.MethodDescriptor method) {
@@ -4683,7 +3463,7 @@ public final class Pizza {
           throw new java.lang.AssertionError("Can't get here.");
       }
     }
-
+    
     public final com.google.protobuf.Message
         getResponsePrototype(
         com.google.protobuf.Descriptors.MethodDescriptor method) {
@@ -4699,23 +3479,23 @@ public final class Pizza {
           throw new java.lang.AssertionError("Can't get here.");
       }
     }
-
+    
     public static Stub newStub(
         com.google.protobuf.RpcChannel channel) {
       return new Stub(channel);
     }
-
+    
     public static final class Stub extends com.pizza.Pizza.OrderingService implements Interface {
       private Stub(com.google.protobuf.RpcChannel channel) {
         this.channel = channel;
       }
-
+      
       private final com.google.protobuf.RpcChannel channel;
-
+      
       public com.google.protobuf.RpcChannel getChannel() {
         return channel;
       }
-
+      
       public  void placeOrder(
           com.google.protobuf.RpcController controller,
           com.pizza.Pizza.OrderRequest request,
@@ -4731,26 +3511,26 @@ public final class Pizza {
             com.pizza.Pizza.OrderResponse.getDefaultInstance()));
       }
     }
-
+    
     public static BlockingInterface newBlockingStub(
         com.google.protobuf.BlockingRpcChannel channel) {
       return new BlockingStub(channel);
     }
-
+    
     public interface BlockingInterface {
       public com.pizza.Pizza.OrderResponse placeOrder(
           com.google.protobuf.RpcController controller,
           com.pizza.Pizza.OrderRequest request)
           throws com.google.protobuf.ServiceException;
     }
-
+    
     private static final class BlockingStub implements BlockingInterface {
       private BlockingStub(com.google.protobuf.BlockingRpcChannel channel) {
         this.channel = channel;
       }
-
+      
       private final com.google.protobuf.BlockingRpcChannel channel;
-
+      
       public com.pizza.Pizza.OrderResponse placeOrder(
           com.google.protobuf.RpcController controller,
           com.pizza.Pizza.OrderRequest request)
@@ -4761,12 +3541,10 @@ public final class Pizza {
           request,
           com.pizza.Pizza.OrderResponse.getDefaultInstance());
       }
-
+      
     }
-
-    // @@protoc_insertion_point(class_scope:example.pizza.OrderingService)
   }
-
+  
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_example_pizza_Person_descriptor;
   private static
@@ -4792,7 +3570,7 @@ public final class Pizza {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_example_pizza_OrderResponse_fieldAccessorTable;
-
+  
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -4827,31 +3605,41 @@ public final class Pizza {
           internal_static_example_pizza_Person_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_example_pizza_Person_descriptor,
-              new java.lang.String[] { "Name", "Email", "Phone", });
+              new java.lang.String[] { "Name", "Email", "Phone", },
+              com.pizza.Pizza.Person.class,
+              com.pizza.Pizza.Person.Builder.class);
           internal_static_example_pizza_Address_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_example_pizza_Address_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_example_pizza_Address_descriptor,
-              new java.lang.String[] { "Street1", "Street2", "Street3", "City", "PostalCode", "State", "Country", });
+              new java.lang.String[] { "Street1", "Street2", "Street3", "City", "PostalCode", "State", "Country", },
+              com.pizza.Pizza.Address.class,
+              com.pizza.Pizza.Address.Builder.class);
           internal_static_example_pizza_LineItem_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_example_pizza_LineItem_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_example_pizza_LineItem_descriptor,
-              new java.lang.String[] { "Item", "Quantity", });
+              new java.lang.String[] { "Item", "Quantity", },
+              com.pizza.Pizza.LineItem.class,
+              com.pizza.Pizza.LineItem.Builder.class);
           internal_static_example_pizza_OrderRequest_descriptor =
             getDescriptor().getMessageTypes().get(3);
           internal_static_example_pizza_OrderRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_example_pizza_OrderRequest_descriptor,
-              new java.lang.String[] { "Person", "Address", "LineItems", });
+              new java.lang.String[] { "Person", "Address", "LineItems", },
+              com.pizza.Pizza.OrderRequest.class,
+              com.pizza.Pizza.OrderRequest.Builder.class);
           internal_static_example_pizza_OrderResponse_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_example_pizza_OrderResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_example_pizza_OrderResponse_descriptor,
-              new java.lang.String[] { "OrderId", "Success", "ErrorMessage", });
+              new java.lang.String[] { "OrderId", "Success", "ErrorMessage", },
+              com.pizza.Pizza.OrderResponse.class,
+              com.pizza.Pizza.OrderResponse.Builder.class);
           return null;
         }
       };
@@ -4860,6 +3648,6 @@ public final class Pizza {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
-
+  
   // @@protoc_insertion_point(outer_class_scope)
 }
