@@ -36,8 +36,8 @@ def x1
   end
 
   endTimeRPB = Time.now - startTime
-  puts "--------------------------------------------------------------"
-  puts "ruby-protocol-buffers, 1000 serialize iterations: #{endTimeRPB} sec"
+  # puts "--------------------------------------------------------------"
+  # puts "ruby-protocol-buffers, 1000 serialize iterations: #{endTimeRPB} sec"
   endTimeRPB
 end
 
@@ -72,7 +72,7 @@ def x2
   end
 
   endTimeBeef = Time.now - startTime
-  puts "beefcake, 1000 serialize iterations: : #{endTimeBeef} sec"
+  # puts "beefcake, 1000 serialize iterations: : #{endTimeBeef} sec"
   endTimeBeef
 end
 
@@ -106,7 +106,7 @@ def x3
   end
 
   endTimeProto = Time.now - startTime
-  puts "protobuf, 1000 serialize iterations: : #{endTimeProto} sec"
+  # puts "protobuf, 1000 serialize iterations: : #{endTimeProto} sec"
   endTimeProto
 end
 
@@ -131,7 +131,7 @@ def x4
   end
 
   endTimeJavaProto = Time.now - startTime
-  puts "java protobuf, 1000 serialize iterations: : #{endTimeJavaProto} sec"
+  # puts "java protobuf, 1000 serialize iterations: : #{endTimeJavaProto} sec"
   endTimeJavaProto
 end
 
@@ -164,17 +164,21 @@ end
 
 x1 = x2 = x3 = x4 = 0
 
-ITERATIONS = 1000
+ITERATIONS = 10000
 (0...ITERATIONS).each do |i|  
   x1 += x1(); x2 += x2(); x3 += x3(); x4 += x4();
 end 
 
+puts "===============================================================\n"
+puts "Performance compared to fastest solution, #{ITERATIONS} iterations"
+puts "===============================================================\n"
+puts "Total ellapsed time: "
+puts "  ruby-protocol-buffers: #{x1.round(3)} sec"
+puts "  beefcake:              #{x2.round(3)} sec"
+puts "  ruby protobuf:         #{x3.round(3)} sec"
+puts "  java protobuf:         #{x4.round(3)} sec"
+puts "===============================================================\n"
 x1 /= ITERATIONS; x2 /= ITERATIONS; x3 /= ITERATIONS; x4 /= ITERATIONS;
-
-puts "===============================================================\n"
-puts "Performance compared to fastest solution"
-puts "===============================================================\n"
-
 puts "protobuf - ruby-protocol-buffers: #{((1 - (x3 / x1)) * 100).round(3)}% faster"
 puts "protobuf - beefcake #{((1 - (x3 / x2)) * 100).round(3)}% faster"
 puts "ruby protobuf - java protobuf #{((1 - (x3 / x4)) * 100).round(3)}% faster"
