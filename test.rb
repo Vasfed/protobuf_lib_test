@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-require 'rubygems'
+# require 'bundler/setup'
 require 'benchmark'
 
 
@@ -9,6 +9,10 @@ class BenchmarkBase
 
   attr_accessor :serialize_result
   attr_accessor :deserialize_result
+
+  def total_result
+    serialize_result + deserialize_result
+  end
 
   def initialize
     reset_results!
@@ -144,6 +148,8 @@ end
 ## => protobuf
 ##
 #####################################################################
+unless ARGV.first && ARGV.first.match(/ruby/)
+  puts "using protobuf"
 class ProtobufBenchmark < BenchmarkBase
 
   def prepare!
@@ -177,6 +183,48 @@ class ProtobufBenchmark < BenchmarkBase
 
 end
 
+
+else
+  # ruby_protobuf
+  puts "using ruby_protobuf"
+
+  class RubyProtobufBenchmark < BenchmarkBase
+
+    def prepare!
+      require 'protobuf/message/message'
+      require 'protobuf/message/enum'
+      require 'protobuf/message/service'
+      require 'protobuf/message/extend'
+
+      @klass = Class.new(::Protobuf::Message) do
+        required :int32, :x, 1
+        required :int32, :y, 2
+        optional :string, :tag, 3
+      end
+    rescue
+      not_available!
+      raise
+    end
+
+    def serialize iterations=1000, obj=create_object
+      res = nil
+      iterations.times{
+        res = obj.serialize_to_string
+      }
+      res
+    end
+
+    def deserialize iterations=1000, buffer=serialize(1)
+      obj = nil
+      iterations.times{
+        obj = @klass.new.parse_from_string(buffer)
+      }
+      obj
+    end
+
+  end
+
+end
 
 #####################################################################
 ##
@@ -301,10 +349,14 @@ end
 puts "===============================================================\n"
 puts "Performance compared to fastest solution, #{iterations} iteration cycles"
 puts "===============================================================\n"
-puts "Total ellapsed time, serialization: "
+puts "Serialization: "
 print_results bms, :serialize_result
 puts
-puts "Total ellapsed time, deserialization: "
+puts "Deserialization: "
 print_results bms, :deserialize_result
+puts
+puts "Total ellapsed time: "
+print_results bms, :total_result
+
 
 puts "===============================================================\n"
